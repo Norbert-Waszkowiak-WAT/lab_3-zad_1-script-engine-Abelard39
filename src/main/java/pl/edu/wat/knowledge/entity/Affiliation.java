@@ -7,10 +7,9 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 import java.util.List;
 
 @Data
-public class Author {
+public class Affiliation {
     @MongoId
-    private String surname;
     private String name;
     @DBRef
-    private Affilation affilation;
+    private Optional<Affiliation> parent;
 }

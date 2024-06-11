@@ -9,8 +9,13 @@ import java.util.List;
 @Data
 public class Article {
     @MongoId
-    private String id;
     private String title;
+    private Optional<Integer> no;
+    private String collection;
+    private Integer score;
+    private Optional<Integer> articleNo;
+    private Integer vol;
     @DBRef
-    private List<Author> authors;
+    private Set<Author> authors;
+    private Journal journal;
 }

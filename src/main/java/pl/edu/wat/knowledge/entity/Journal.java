@@ -7,10 +7,12 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 import java.util.List;
 
 @Data
-public class Author {
+public class Journal {
     @MongoId
-    private String surname;
-    private String name;
+    private Integer baseScore;
+    private String title;
+    private String issn;
     @DBRef
-    private Affilation affilation;
+    private Publisher publisher;
+    
 }

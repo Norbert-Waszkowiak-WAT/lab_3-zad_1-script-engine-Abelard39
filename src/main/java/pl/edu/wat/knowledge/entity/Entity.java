@@ -7,10 +7,9 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 import java.util.List;
 
 @Data
-public class Author {
+public class Entity {
     @MongoId
-    private String surname;
-    private String name;
-    @DBRef
-    private Affilation affilation;
+    private String id;
+    private Instant createDate;
+    
 }
