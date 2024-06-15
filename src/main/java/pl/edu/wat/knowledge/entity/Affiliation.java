@@ -5,11 +5,12 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import java.util.List;
+import pl.edu.wat.knowledge.entity.Entity;
 
 @Data
-public class Affiliation {
+public class Affiliation{
     @MongoId
     private String name;
     @DBRef
-    private Optional<Affiliation> parent;
+    private Affiliation parent;
 }

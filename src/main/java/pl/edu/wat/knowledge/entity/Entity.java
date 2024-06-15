@@ -5,6 +5,7 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import java.util.List;
+import java.time.Instant;
 
 @Data
 public class Entity {

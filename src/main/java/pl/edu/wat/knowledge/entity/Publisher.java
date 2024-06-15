@@ -9,7 +9,6 @@ import java.util.List;
 @Data
 public class Publisher {
     @MongoId
-    private String id;
     private String name;
     private String location;
     
