@@ -36,6 +36,29 @@ class ScriptServiceTest extends AbstractContainerBaseTest {
         String id = scriptService.exec(addScript);
         String deleteScript = "authorRepository.deleteById(\"" + id + "\")";
         assert scriptService.exec(deleteScript) != null;
+
+        
+    }
+
+    @Test
+    public void testScoring() {
+        String addScript = """ 
+                var Article = Java.type('pl.edu.wat.knowledge.entity.Article');
+                var Author = Java.type('pl.edu.wat.knowledge.entity.Author');
+                var Set = Java.type('java.util.Set');
+
+                var patrycjaAuthor = new Author();
+                patrycjaAuthor.setName("Patrycja");
+                patrycjaAuthor.setSurname("Woda");
+                patrycjaAuthor.setPesel("123123123");
+                authorRepository.save(patrycjaAuthor).getId();
+                """;
+                
+        String id = scriptService.exec(addScript);
+        String deleteScript = "authorRepository.deleteById(\"" + id + "\")";
+        assert scriptService.exec(deleteScript) != null;
+
+        
     }
 
 

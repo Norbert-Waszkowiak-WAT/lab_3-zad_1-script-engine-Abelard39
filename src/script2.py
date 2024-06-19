@@ -109,6 +109,7 @@ def add_article(journal_id, author_ids):
         "createDate": current_datetime(),
         "title": random_string(),
         "no": random.randint(1, 20),
+        "year": random.randint(1900, 2024),
         "collection": random_string(),
         "score": random.randint(1, 100),
         "articleNo": random.randint(1, 100),
@@ -127,8 +128,5 @@ books = [add_book("http://127.0.0.1:8080/api/publishers/publisher"+str(random.ra
 chapters = [add_chapter("http://127.0.0.1:8080/api/books/book"+str(random.randint(1, 10)), ["http://127.0.0.1:8080/api/authors/author"+str(random.randint(1, 10)) for _ in range(2)]) for _ in range(5)]
 journals = [add_journal("http://127.0.0.1:8080/api/publishers/publisher"+str(random.randint(1, 5))) for _ in range(5)]
 articles = [add_article("http://127.0.0.1:8080/api/journals/journal"+str(random.randint(1, 5)), ["http://127.0.0.1:8080/api/authors/author"+str(random.randint(1, 10)) for _ in range(2)]) for _ in range(5)]
-
-print("Data population complete.")
-
 
 print("Data population complete.")
