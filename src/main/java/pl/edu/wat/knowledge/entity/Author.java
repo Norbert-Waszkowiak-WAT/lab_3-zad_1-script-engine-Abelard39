@@ -11,6 +11,8 @@ public class Author {
     @MongoId
     private String surname;
     private String name;
+    private Integer score;
+
     @DBRef
-    private Affilation affilation;
+    private Affiliation affiliation;
 }

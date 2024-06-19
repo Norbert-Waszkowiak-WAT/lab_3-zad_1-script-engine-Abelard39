@@ -4,12 +4,15 @@ import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
-import java.util.List;
+import org.springframework.lang.Nullable;
 
 @Data
-public class Affiliation {
-    @MongoId
+public class Affiliation extends Entity{
     private String name;
+
+    @Nullable
     @DBRef
-    private Optional<Affiliation> parent;
+    private Affiliation parent;
+
+    
 }

@@ -3,17 +3,20 @@ package pl.edu.wat.knowledge.entity;
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.MongoId;
-
-import java.util.List;
+import org.springframework.lang.Nullable;
 
 @Data
-public class Book{
+public class Book {
     @MongoId
     private String isbn;
     private Integer year;
+    private Integer baseScore;
     private String title;
-    private Integer baseScore; 
+
     @DBRef
-    private Optional<Author> editor;
     private Publisher publisher;
+
+    @DBRef
+    @Nullable
+    private Author editor;
 }
