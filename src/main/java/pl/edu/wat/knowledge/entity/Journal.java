@@ -6,10 +6,10 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 
 
 @Data
-public class Journal {
+public class Journal extends Entity{
     private Integer baseScore;
     private String title;
-    @MongoId
+
     private String issn;
 
     @DBRef

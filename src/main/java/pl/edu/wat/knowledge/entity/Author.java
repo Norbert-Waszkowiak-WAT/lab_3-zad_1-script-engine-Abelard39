@@ -7,8 +7,8 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 import java.util.List;
 
 @Data
-public class Author {
-    @MongoId
+public class Author extends Entity{
+
     private String surname;
     private String name;
     private Integer score;

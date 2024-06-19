@@ -6,8 +6,8 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 
 
 @Data
-public class Publisher{
-    @MongoId
+public class Publisher extends Entity{
+
     private String name;
     private String location;
 }

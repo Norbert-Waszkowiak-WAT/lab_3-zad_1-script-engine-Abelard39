@@ -8,8 +8,8 @@ import org.springframework.lang.Nullable;
 import java.util.List;
 
 @Data
-public class Article {
-    @MongoId
+public class Article extends Entity{
+
     private String title;
     private String collection;
     private Integer score;

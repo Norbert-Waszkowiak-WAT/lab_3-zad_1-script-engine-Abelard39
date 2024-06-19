@@ -6,8 +6,8 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 import org.springframework.lang.Nullable;
 
 @Data
-public class Book {
-    @MongoId
+public class Book extends Entity {
+
     private String isbn;
     private Integer year;
     private Integer baseScore;

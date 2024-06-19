@@ -7,10 +7,10 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 import java.util.List;
 
 @Data
-public class Chapter{
+public class Chapter extends Entity{
     private Integer score;
     private String collection;
-    @MongoId
+
     private String title;
 
     @DBRef
