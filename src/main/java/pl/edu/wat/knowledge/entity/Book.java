@@ -5,7 +5,6 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import java.util.List;
-import pl.edu.wat.knowledge.*;
 
 @Data
 public class Book{
@@ -15,6 +14,6 @@ public class Book{
     private String title;
     private Integer baseScore; 
     @DBRef
-    private Author editor;
+    private Optional<Author> editor;
     private Publisher publisher;
 }

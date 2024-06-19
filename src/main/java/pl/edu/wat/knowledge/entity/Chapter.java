@@ -4,17 +4,15 @@ import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
-import java.util.Set;
-import pl.edu.wat.knowledge.*;
+import java.util.List;
 
 @Data
 public class Chapter {
+    @MongoId
     private String score;
     private String collection;
-    @MongoId
     private String title;
     @DBRef
     private Set<Author> authors;
-    @DBRef
     private Book book;
 }
